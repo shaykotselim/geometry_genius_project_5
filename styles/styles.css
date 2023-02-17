@@ -1,0 +1,38 @@
+body{
+    font-family: 'Inter', sans-serif;
+}
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 130px;
+    margin-left: 7%;
+    background-color: rgba(16, 144, 216, 0.1);
+    padding: 50px;
+    border-radius: 8px;
+}
+.headerContainer h1{
+    font-size: 45px;
+    font-weight: 700;
+    color: rgba(17, 17, 17, 0.8);
+}
+.headerContainer p{
+    font-size: 30px;
+    font-weight: 500;
+    color:  rgba(17, 17, 17, 0.6);
+}
+.headerButton{
+    width: 120px;
+    height: 48px;
+    background-color: #1090D8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.headerButton:hover{
+    background-color:black;
+    color: black;
+}
