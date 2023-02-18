@@ -14,7 +14,7 @@ function getElementInput (id){
            }
         
         return previousInputValue;
-        
+
 }
 // function for Calculation 
 function calculationElement (first , second){
@@ -23,7 +23,7 @@ function calculationElement (first , second){
     const secondValue = getElementInput(second);
     
     if(firstValue < 0 || secondValue < 0 || isNaN(firstValue) || isNaN(secondValue) || typeof(firstValue) === 'string' || typeof(secondValue)==='string'){
-        alert('Wrong');
+        alert('Number is Wrong');
     } 
 
    else{
@@ -50,17 +50,17 @@ function createDomElement (id, fixedresult, text){
 }
 // Triangle Area
 document.getElementById('triangleButton').addEventListener('click', function(){
-        serial = serial +1;
+        
     const triangleText = getElementText('triangleText');
     const triangle = calculationElement('triangleInputb', 'triangleInputh');
     let totalTriangle = triangle * 0.5;
     let fixedTriangle =totalTriangle.toFixed(2)
 
     if (typeof(triangle) === "undefined"){
-        alert ('Undefined Number')
+        alert ('Number Not Define')
     }
        else{
-        serial += 1;
+        serial = serial +1;
         createDomElement("resultContainer", fixedTriangle, triangleText )
        }
     
@@ -68,7 +68,7 @@ document.getElementById('triangleButton').addEventListener('click', function(){
 })
 // Rectangle Area
 document.getElementById('rectangleButton').addEventListener('click', function() {
-    serial = serial +1;
+   
     const rectangleText = getElementText('rectangleText');
     const rectangle = calculationElement('rectangleInputw', 'rectangleInputi')
     
@@ -76,14 +76,14 @@ document.getElementById('rectangleButton').addEventListener('click', function() 
         alert ('Undefined Number')
     }
        else{
-        serial += 1;
+        serial = serial +1;
         createDomElement('resultContainer',rectangle, rectangleText)
        }
     
 })
 // Parallelogram Area
 document.getElementById('parallelogramButton').addEventListener('click',function(){
-    serial = serial +1;
+  
     const parallelogramText = getElementText('parallelogramText');
     const parallelogram = calculationElement('parallelogramInputb','parallelogramInputh');
     
@@ -91,14 +91,14 @@ document.getElementById('parallelogramButton').addEventListener('click',function
         alert ('Undefined Number')
     }
        else{
-        serial += 1;
+        serial = serial +1;
         createDomElement('resultContainer',parallelogram, parallelogramText)
        }
     
 })
 // Rhombus Area
 document.getElementById('rhombusButton').addEventListener('click',function(){
-    serial = serial +1;
+    
     const textRhombus = getElementText('rhombusText');
     const rhombus = calculationElement('rhombusInputb', 'rhombusInputh');
 
@@ -109,7 +109,7 @@ document.getElementById('rhombusButton').addEventListener('click',function(){
         alert ('Undefined Number')
     }
        else{
-        serial += 1;
+        serial = serial +1;
         createDomElement('resultContainer', fixedRhombus, textRhombus);
        }
     
@@ -117,7 +117,7 @@ document.getElementById('rhombusButton').addEventListener('click',function(){
 
 // Pentagon Area 
 document.getElementById('pentagonButton').addEventListener('click',function(){
-    serial = serial +1;
+  
     const textPentagon = getElementText('pentagonText');
 
     const pentagon = calculationElement('pentagonInputb', 'pentagonInputh');
@@ -129,7 +129,7 @@ document.getElementById('pentagonButton').addEventListener('click',function(){
         alert ('Undefined Number')
     }
        else{
-        serial += 1;
+        serial = serial +1;
         createDomElement('resultContainer', fixedPentagon, textPentagon);
        }
     
@@ -137,7 +137,7 @@ document.getElementById('pentagonButton').addEventListener('click',function(){
 })
 // For Ellips Area
 document.getElementById('ellipsButton').addEventListener('click',function(){
-    serial = serial +1;
+   
     const textEllips = getElementText('ellipsText');
     const ellips = calculationElement('ellipsInputb','ellipsInputh');
 
@@ -148,7 +148,7 @@ document.getElementById('ellipsButton').addEventListener('click',function(){
         alert ('Undefined Number')
     }
        else{
-        serial += 1;
+        serial = serial +1;
         createDomElement('resultContainer', fixedEllips, textEllips)
        }
    
