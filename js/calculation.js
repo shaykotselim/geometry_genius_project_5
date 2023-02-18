@@ -6,8 +6,6 @@ function getElementText (id){
 // function for get Input value
 function getElementInput (id){
 
-
-
         const getInputFieldString =  document.getElementById(id).value;
         const previousInputValue = parseFloat(getInputFieldString);           
        
@@ -17,10 +15,6 @@ function getElementInput (id){
         
         return previousInputValue;
         
-    
-        
-    
-
 }
 // function for Calculation 
 function calculationElement (first , second){
