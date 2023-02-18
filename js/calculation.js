@@ -10,7 +10,12 @@ function getElementInput (id){
 
         const getInputFieldString =  document.getElementById(id).value;
         const previousInputValue = parseFloat(getInputFieldString);           
-         return previousInputValue;
+       
+        if(typeof(previousInputValue) === 'string' && previousInputValue < 0 ){
+            alert('Warning')
+           }
+        
+        return previousInputValue;
         
     
         
@@ -23,13 +28,9 @@ function calculationElement (first , second){
     const firstValue = getElementInput(first);
     const secondValue = getElementInput(second);
     
-    if(firstValue <= 0 || secondValue <= 0){
-        alert('Your number is a Negative Value');
-    }else if(firstValue && secondValue === String){
-        alert('You Value is String');
-    } else if(isNaN(firstValue) || isNaN(secondValue) ){
-        alert('Your number is a NuLL');
-    }
+    if(firstValue < 0 || secondValue < 0 || isNaN(firstValue) || isNaN(secondValue) || typeof(firstValue) === 'string' || typeof(secondValue)==='string'){
+        alert('Wrong');
+    } 
 
    else{
     let total = firstValue * secondValue;
@@ -61,7 +62,14 @@ document.getElementById('triangleButton').addEventListener('click', function(){
     let totalTriangle = triangle * 0.5;
     let fixedTriangle =totalTriangle.toFixed(2)
 
-    createDomElement("resultContainer", fixedTriangle, triangleText )
+    if (typeof(triangle) === "undefined"){
+        alert ('Undefined Number')
+    }
+       else{
+        serial += 1;
+        createDomElement("resultContainer", fixedTriangle, triangleText )
+       }
+    
 
 })
 // Rectangle Area
@@ -69,16 +77,30 @@ document.getElementById('rectangleButton').addEventListener('click', function() 
     serial = serial +1;
     const rectangleText = getElementText('rectangleText');
     const rectangle = calculationElement('rectangleInputw', 'rectangleInputi')
-
-    createDomElement('resultContainer',rectangle, rectangleText)
+    
+    if (typeof(rectangle) === "undefined"){
+        alert ('Undefined Number')
+    }
+       else{
+        serial += 1;
+        createDomElement('resultContainer',rectangle, rectangleText)
+       }
+    
 })
 // Parallelogram Area
 document.getElementById('parallelogramButton').addEventListener('click',function(){
     serial = serial +1;
     const parallelogramText = getElementText('parallelogramText');
     const parallelogram = calculationElement('parallelogramInputb','parallelogramInputh');
-
-    createDomElement('resultContainer',parallelogram, parallelogramText)
+    
+    if (typeof(parallelogram) === "undefined"){
+        alert ('Undefined Number')
+    }
+       else{
+        serial += 1;
+        createDomElement('resultContainer',parallelogram, parallelogramText)
+       }
+    
 })
 // Rhombus Area
 document.getElementById('rhombusButton').addEventListener('click',function(){
@@ -89,7 +111,14 @@ document.getElementById('rhombusButton').addEventListener('click',function(){
     let totalRhombus = rhombus * 0.5;
     let fixedRhombus = totalRhombus.toFixed(2);
 
-    createDomElement('resultContainer', fixedRhombus, textRhombus);
+    if (typeof(rhombus) === "undefined"){
+        alert ('Undefined Number')
+    }
+       else{
+        serial += 1;
+        createDomElement('resultContainer', fixedRhombus, textRhombus);
+       }
+    
 })
 
 // Pentagon Area 
@@ -102,7 +131,14 @@ document.getElementById('pentagonButton').addEventListener('click',function(){
     let totalPentagon = pentagon * 0.5;
     let fixedPentagon = totalPentagon.toFixed(2);
 
-    createDomElement('resultContainer', fixedPentagon, textPentagon);
+    if (typeof(pentagon) === "undefined"){
+        alert ('Undefined Number')
+    }
+       else{
+        serial += 1;
+        createDomElement('resultContainer', fixedPentagon, textPentagon);
+       }
+    
 
 })
 // For Ellips Area
@@ -114,14 +150,20 @@ document.getElementById('ellipsButton').addEventListener('click',function(){
     let totalEllips = ellips * 3.14;
     let fixedEllips = totalEllips.toFixed(2);
 
-    createDomElement('resultContainer', fixedEllips, textEllips)
+    if (typeof(ellips) === "undefined"){
+        alert ('Undefined Number')
+    }
+       else{
+        serial += 1;
+        createDomElement('resultContainer', fixedEllips, textEllips)
+       }
+   
 })
 
 
 
-
+// Blog Button 
 document.getElementById('blog-Button').addEventListener('click',function(){
-    // console.log('click');
 
     window.location.href='/blog.html';
 })
