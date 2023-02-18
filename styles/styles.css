@@ -42,27 +42,25 @@ body{
     margin-left: 7%;
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 80% 20% ; 
+    grid-template-columns: 80% auto ; 
     grid-gap: 25px;
 
 }
 .subContainer{
-    
     display: grid;
     grid-template-columns:auto auto auto ;
     grid-gap: 15px;
 }
 .container1{
-    /* background-color: pink; */
-    height: 600px;
+    height: 530px;
     width: 315px;
-    /* width: 20%; */
     border-radius: 8px;
     border: 1px solid  rgba(17, 17, 17, 0.1);
 }
-.container1 img{
-    /* width: auto; */
-    
+.container{
+    width: auto;
+}
+.container1 img{   
     margin-left:15%;
     margin-top: 10%;
     width: 70%;
@@ -82,7 +80,6 @@ body{
 }
 .calculateButton{
     margin-top: 81px;
-    /* margin-bottom: 10%; */
     width: 200px;
     height: 56px;
     margin-left: 59px;
@@ -93,12 +90,7 @@ body{
     font-weight: 700;
     border-radius: 8px;
 }
-/* table tr::before{
-    display: flex;
-    gap: 10px;
-    counter-increment: rowNumber;
-    content: counter(rowNumber)".";
-} */
+
 #resultText{
     margin-left: 5px;
 }
@@ -109,4 +101,5 @@ body{
     border-radius: 4px;
     height: 30px;
     margin-left: 5px;
+    font-size: 12px;
 }
