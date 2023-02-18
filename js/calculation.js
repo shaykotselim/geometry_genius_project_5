@@ -116,3 +116,12 @@ document.getElementById('ellipsButton').addEventListener('click',function(){
 
     createDomElement('resultContainer', fixedEllips, textEllips)
 })
+
+
+
+
+document.getElementById('blog-Button').addEventListener('click',function(){
+    // console.log('click');
+
+    window.location.href='/blog.html';
+})
